@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <h1>All Projects</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr style="color: dodgerblue;">
+          <th scope="col">#</th>
+          <th scope="col">Project Name</th>
+          <th scope="col">Team Members</th>
+          <th scope="col">Project Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for project in projects %}
+        <tr>
+          <th scope="row" style="color: white">{{ loop.index }}</th>
+          <td style="color: white">{{ project.title }}</td>
+          <td style="color: white">{{ project.team_members }}</td>
+          <td style="color: white">{{ project.description }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

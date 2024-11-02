@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+register
+{% endblock %}
+
+{% block main %}
+    <div id="signup-div">
+        <form action="/register" method="post" id="signup-form">
+            <div class="form-div">
+                <label for="username">Username</label>
+                <input class="input-field" id="username" name="username" type="text" placeholder="Username" autocomplete="off" autofocus required>
+                <label for="password" style="margin-top: 15px;">Password</label>
+                <input class="input-field" id="password" name="password" type="password" placeholder="Password" required>
+                <label for="confirmation" style="margin-top: 15px;">Confirm</label>
+                <input class="input-field" id="confirmation" name="confirmation" type="password" placeholder="Confirm Password" required>
+                
+                <div class="button-div">
+                    <button id="signup-button" type="submit">Sign Up</button>
+                </div>  
+            </div>
+            <p class="signin-signup">Already a user? Please<a href="/login">log In</a></p>
+        </form>
+    </div>
+{% endblock %}

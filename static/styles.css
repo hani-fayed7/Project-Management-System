@@ -1,0 +1,122 @@
+html, body, main{
+    background-color: #121212;
+    color: white;
+    font-size: 20px;
+    height: 80vh;
+}
+
+#footer{
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    height: auto;
+    color: #ffffff63;
+    text-align: center;
+    font-size: small;
+}
+
+/* SIGN IN AND SIGN UP AND CHANGE PASSWORD */
+
+#login-div, #signup-div, #changePassword-div{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#login-form, #signup-form, #changePassword-form{
+    border: 2px solid #575757;
+    background-color:#292929;
+    border-radius: 20px;
+}
+
+.form-div{
+    padding: 20px 60px;
+}
+
+.input-field{
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color:#181818;
+}
+
+.button-div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#login-button, #signup-button, #changePassword-button{
+    background-color: #181818;
+    color:white;
+    border: 2px solid #575757;
+    border-bottom: 5px solid #575757;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#login-button:hover, #signup-button:hover, #changePassword-button:hover{
+    background-color: #575757;
+    color:black;
+    border: 2px solid #181818;
+    border-bottom: 5px solid #181818;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none; 
+    margin-left: 4px;
+}
+
+.signin-signup{
+    font-size: 12px; 
+    display: flex; 
+    justify-content: center;
+}
+
+label{
+    display: flex;
+    align-items: flex-start;
+}
+
+/*NAVBAR*/
+#navbar-style{
+    background-color: #292929;
+}
+
+ /* CSS styles for the dashboard */
+ /* Custom CSS styles */
+
+.container {
+    margin-top: 30px;
+}
+
+.jumbotron {
+    background-color: #292929;
+    padding: 2rem 2rem;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+}
+
+.card{
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-10px);
+}

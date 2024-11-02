@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tasks
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1>Tasks</h1>
+
+        {% if tasks %}
+            <table class="table table-striped">
+                <thead>
+                    <tr style="color:dodgerblue">
+                        <th>#</th>
+                        <th>Task</th>
+                        <th>Project name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for somthing in tasks %}
+                        <tr>
+                            <td style="color: white">{{ loop.index }}</td>
+                            <td style="color: white">{{ somthing.task }}</td>
+                            <td style="color: white">{{ somthing.title }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No tasks found.</p>
+        {% endif %}
+
+        <a href="/create-task" class="btn btn-primary">Create Task</a>
+    </div>
+{% endblock %}

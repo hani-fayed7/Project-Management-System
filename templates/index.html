@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+<div class="container">
+	<div class="jumbotron mt-5">
+		<h1>Welcome, {{ username }}!</h1>
+		<p>Welcome to the project management system. Get started by creating a project below:</p>
+		<hr class="my-4">
+		<a class="btn btn-primary btn-lg" href="/create-project" role="button">Create a Project</a>
+	</div>
+	<div class="row">
+		<h2 style="margin-top: 50px;">Your Projects</h2>
+		{% if projects %}
+			{% for project in projects %}
+			<div class="col-md-4" style="margin-top: 30px;">
+				<a href="/tasks">
+					<div class="card mb-4" style="background-color: #292929; color:white;">
+						<div class="card-body">
+							<h5 class="card-title">{{ project.title }}</h5>
+							<p class="card-text">{{ project.description }}</p>
+							<p class="card-text">{{ project.team_members }}</p>
+							<p class="card-text">
+								<small class="text-muted">Created on {{ project.created_at }}</small>
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		{% else %}
+            <p>No project found.</p>
+        {% endif %}
+	</div>
+</div>
+{% endblock %}

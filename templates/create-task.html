@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tasks
+{% endblock %}
+
+{% block main %}
+  <div class="container">
+    <h1>Create Task</h1>
+    <form action="/create-task" method="POST">
+      <div class="form-group">
+        <label for="project">Project</label>
+        <select class="form-control" id="project" name="project" style="background-color: #121212; color: white;">
+          {% for project in projects %}
+          <option value="{{ project.id }}">{{ project.title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="task">Task</label>
+        <input type="text" class="form-control" id="task" name="task" placeholder="Enter task" required style="background-color: #121212; color: white;">
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Create Task</button>
+    </form>
+  </div>
+{% endblock %}

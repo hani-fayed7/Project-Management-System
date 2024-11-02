@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+login
+{% endblock %}
+
+{% block main %}
+    <div id="login-div">
+        <form action="/login" method="post" id="login-form">
+            <div class="form-div">      
+                <label for="username">Username</label>
+                <input class="input-field" id="username" name="username" type="text" placeholder="Username" autocomplete="off" autofocus required>
+                <label for="password" style="margin-top: 15px;">Password</label>
+                <input class="input-field" id="password" name="password" type="password" required placeholder="Password">
+                
+                <div class="button-div">
+                    <button id="login-button" type="submit">Log In</button>
+                </div>  
+            </div>
+            <p class="signin-signup">Not a user? Please <a href="/register">register</a></p>
+        </form>
+    </div>
+{% endblock %}
